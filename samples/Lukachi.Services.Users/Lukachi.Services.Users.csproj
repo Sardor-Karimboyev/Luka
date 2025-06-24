@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Luka.Auth\src\Luka.Auth\Luka.Auth.csproj" />
+      <ProjectReference Include="..\..\src\Luka.CQRS.Queries\src\Luka.CQRS.Queries\Luka.CQRS.Queries.csproj" />
+      <ProjectReference Include="..\..\src\Luka.Docs.Swagger\src\Luka.Docs.Swagger\Luka.Docs.Swagger.csproj" />
+      <ProjectReference Include="..\..\src\Luka.Persistence.Postgre\src\Luka.Persistence.Postgre\Luka.Persistence.Postgre.csproj" />
+      <ProjectReference Include="..\..\src\Luka.Persistence.Redis\src\Luka.Persistence.Redis\Luka.Persistence.Redis.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.15">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>

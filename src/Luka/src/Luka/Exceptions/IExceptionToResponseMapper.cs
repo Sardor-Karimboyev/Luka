@@ -1,6 +1,6 @@
 namespace Luka.Exceptions;
 
-public class IExceptionToResponseMapper
+public interface IExceptionToResponseMapper
 {
-    
+    ExceptionResponse Map(Exception exception);
 }

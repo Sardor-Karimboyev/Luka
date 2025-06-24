@@ -1,6 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Luka.Persistence.Postgre;
 
-public interface IApplicaitonContext
+public interface IApplicationDbContext
 {
-    
+    DbContext Context { get; }
 }

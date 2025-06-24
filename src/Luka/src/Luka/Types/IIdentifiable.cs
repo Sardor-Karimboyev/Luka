@@ -1,6 +1,6 @@
 namespace Luka.Types;
 
-public class IIdentifiable
+public interface IIdentifiable<out T>
 {
-    
+    T Id { get; }
 }

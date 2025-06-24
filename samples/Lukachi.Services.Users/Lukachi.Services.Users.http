@@ -1,0 +1,18 @@
+@users = http://localhost:5140
+
+GET {{users}}
+Accept: application/json
+###
+GET {{users}}/ping
+###
+### LOGIN (get JWT)
+POST {{users}}/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+### AUTH-TEST (protected endpoint)
+GET {{users}}/auth-test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMiLCJ1bmlxdWVfbmFtZSI6IjEyMyIsImp0aSI6IjZiNWE5NDk5LTg1M2QtNDMxZi05NjcwLWMyMzgyNzdiNWVkMyIsImlhdCI6IjE3NTA2NTg2ODkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsInBlcm1pc3Npb24iOlsiQ1JFQVRFX1VTRVIiLCJHRVRfVVNFUiJdLCJuYmYiOjE3NTA2NTg2ODksImV4cCI6MTc1MDY2MjI4OSwiaXNzIjoibHVrYWNoaSJ9.6hTUu1CUqy4KyV4QznRMn4trmKjSezrSays3kCMQipA

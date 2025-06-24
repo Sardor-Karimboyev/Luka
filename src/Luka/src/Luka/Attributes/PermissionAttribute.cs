@@ -1,6 +1,6 @@
 namespace Luka.Attributes;
 
-public class PermissionAttribute
+[AttributeUsage(AttributeTargets.Enum)]
+public class PermissionAttribute : Attribute
 {
-    
 }

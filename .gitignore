@@ -1,5 +1,54 @@
-bin/
-obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+# ===========================
+# OS-Specific (macOS)
+# ===========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# macOS Finder
+.Spotlight-V100
+.Trashes
+
+# macOS Volume settings
+.VolumeIcon.icns
+
+# macOS Backup files
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# ===========================
+# Rider IDE
+# ===========================
+.idea/
+*.sln.iml
+
+# ===========================
+# Visual Studio / .NET
+# ===========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Logs
+*.log
+
+# Rider dotCover
+.idea/.idea.DotSettings
+
+# ===========================
+# NuGet
+# =======================

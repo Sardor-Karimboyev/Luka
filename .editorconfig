@@ -1,0 +1,30 @@
+# Luka solution-wide formatting rules
+root = true
+
+# Global rules (all files)
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# C# files
+[*.cs]
+# Place 'using System' directives first
+dotnet_sort_system_directives_first = true
+
+# Braces on new lines for all blocks
+csharp_new_line_before_open_brace = all
+
+# Indentation settings
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = flush_left
+
+# Optional: max line length for readability
+max_line_length = 120
+
+# Optional: file-scoped namespace preference (C# 10+)
+csharp_style_namespace_declarations = file_scoped:suggestion

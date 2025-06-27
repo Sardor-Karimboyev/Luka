@@ -1,6 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageId>Luka.Persistence.Redis</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Sardor Karimboyev</Authors>
+        <Company>Luka</Company>
+        <Description>Redis extension</Description>
+        <PackageOutputPath>../../nupkgs</PackageOutputPath>
+    </PropertyGroup>
+    <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>

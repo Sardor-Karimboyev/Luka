@@ -7,6 +7,7 @@
         <Company>Luka</Company>
         <Description>JWT + Permission-based Auth</Description>
         <PackageOutputPath>../../nupkgs</PackageOutputPath>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>

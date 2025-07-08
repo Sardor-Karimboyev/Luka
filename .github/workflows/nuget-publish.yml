@@ -30,4 +30,4 @@ jobs:
                   dotnet pack src/Luka.Persistence.Redis/src/Luka.Persistence.Redis/Luka.Persistence.Redis.csproj --configuration Release --output nupkgs
                   dotnet pack src/Luka.Docs.Swagger/src/Luka.Docs.Swagger/Luka.Docs.Swagger.csproj --configuration Release --output nupkgs
             - name: 🚀 Push to NuGet
-              run: dotnet nuget push "nupkgs/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+              run: dotnet nuget push "nupkgs/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate

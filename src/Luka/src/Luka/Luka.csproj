@@ -1,13 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageId>Luka</PackageId>
+        <Version>1.0.4</Version>
+        <Authors>Sardor Karimboyev</Authors>
+        <Company>Luka</Company>
+        <PackageOutputPath>../../nupkgs</PackageOutputPath>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageTags>luka</PackageTags>
+        <RepositoryUrl>https://github.com/Sardor-Karimboyev/Luka</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Sardor-Karimboyev/Luka</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Description>Luka</Description>
-        <Authors>swise.tech</Authors>
         <TargetFramework>net8.0</TargetFramework>
         <AssemblyName>Luka</AssemblyName>
         <Title>Luka</Title>
-        <PackageId>Luka</PackageId>
-        <PackageTags>Luka</PackageTags>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

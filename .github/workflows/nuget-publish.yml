@@ -23,6 +23,7 @@ jobs:
 
             - name: 📦 Pack Luka packages
               run: |
+                  dotnet pack src/Luka/src/Luka/Luka.csproj --configuration Release --output nupkgs
                   dotnet pack src/Luka.Auth/src/Luka.Auth/Luka.Auth.csproj --configuration Release --output nupkgs
                   dotnet pack src/Luka.CQRS.Queries/src/Luka.CQRS.Queries/Luka.CQRS.Queries.csproj --configuration Release --output nupkgs
                   dotnet pack src/Luka.Persistence.Postgre/src/Luka.Persistence.Postgre/Luka.Persistence.Postgre.csproj --configuration Release --output nupkgs

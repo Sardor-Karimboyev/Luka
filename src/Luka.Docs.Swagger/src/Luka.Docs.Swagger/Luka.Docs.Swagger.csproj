@@ -7,6 +7,11 @@
         <Company>Luka</Company>
         <Description>JWT + Permission-based Auth</Description>
         <PackageOutputPath>../../nupkgs</PackageOutputPath>
+        <PackageTags>auth;jwt;permissions;luka</PackageTags>
+        <RepositoryUrl>https://github.com/Sardor-Karimboyev/Luka</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Sardor-Karimboyev/Luka</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>

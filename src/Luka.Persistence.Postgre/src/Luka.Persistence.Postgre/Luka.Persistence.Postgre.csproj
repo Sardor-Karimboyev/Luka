@@ -12,6 +12,7 @@
         <PackageProjectUrl>https://github.com/Sardor-Karimboyev/Luka</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>

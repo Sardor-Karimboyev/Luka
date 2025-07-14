@@ -25,8 +25,7 @@
         <PackageReference Include="Figgle" Version="0.4.0" />
         <PackageReference Include="Scrutor" Version="3.3.0" >
             <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
+         </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="" />

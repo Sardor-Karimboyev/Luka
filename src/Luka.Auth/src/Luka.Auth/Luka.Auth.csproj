@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>Luka.Auth</PackageId>
-        <Version>1.0.5</Version>
+        <Version>1.0.9</Version>
         <Authors>Sardor Karimboyev</Authors>
         <Company>Luka</Company>
         <Description>JWT + Permission-based Auth</Description>

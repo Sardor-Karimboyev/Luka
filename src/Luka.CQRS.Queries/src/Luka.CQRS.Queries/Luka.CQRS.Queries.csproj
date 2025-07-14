@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <PackageId>Luka.CQRS.Queries</PackageId>
         <Version>1.0.8</Version>
@@ -12,6 +11,7 @@
         <PackageProjectUrl>https://github.com/Sardor-Karimboyev/Luka</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
@@ -19,5 +19,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>ClassLibrary1</RootNamespace>
     </PropertyGroup>
-
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
 </Project>

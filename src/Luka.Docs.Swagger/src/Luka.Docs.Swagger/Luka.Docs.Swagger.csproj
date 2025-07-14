@@ -12,13 +12,16 @@
         <PackageProjectUrl>https://github.com/Sardor-Karimboyev/Luka</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
-
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\..\..\Luka\src\Luka\Luka.csproj" />
     </ItemGroup>

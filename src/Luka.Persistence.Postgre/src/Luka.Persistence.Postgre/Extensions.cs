@@ -13,21 +13,21 @@ public static class Extensions
     public static ILukaBuilder AddPostgreSql<TContext>(this ILukaBuilder builder) where TContext : ApplicationDbContext
     {
         var sqlOptions = builder.GetOptions<PostgreSqlOptions>("postgreSQL");
-        
+
         var connectionString =
             $"Host={sqlOptions.Host};Port={sqlOptions.Port};Database={sqlOptions.Database};Username={sqlOptions.User};Password={sqlOptions.Password}";
-        
-        builder.Services.AddDbContext<TContext>(options => 
+
+        builder.Services.AddDbContext<TContext>(options =>
             options.UseNpgsql(connectionString));
-        
+
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-            
+
         builder.Services.AddScoped<IApplicationDbContext, TContext>();
         if(sqlOptions.IsNeedToSyncPermissionEnumToDb)
             builder.SyncPermissionsWithDatabase<TContext>();
         return builder;
     }
-    
+
     public static IApplicationBuilder UsePostgreSql<TContext>(this IApplicationBuilder app) where TContext : DbContext
     {
         using (var scope = app.ApplicationServices.CreateScope())
@@ -35,11 +35,17 @@ public static class Extensions
             var dbContext = scope.ServiceProvider.GetRequiredService<TContext>();
             // dbContext.Database.EnsureCreated();
             dbContext.Database.Migrate();
+            var initializer = scope.ServiceProvider.GetService<IDbInitializer>();
+            if (initializer is not null)
+            {
+                initializer.InitAsync().GetAwaiter().GetResult();
+            }
         }
+
 
         return app;
     }
-    public static ILukaBuilder AddRepository(this ILukaBuilder builder) 
+    public static ILukaBuilder AddRepository(this ILukaBuilder builder)
     {
         builder.Services.AddTransient(typeof(IRepository<,>), typeof(Repository<,>));
         return builder;
@@ -59,7 +65,7 @@ public static class Extensions
 
     private static string ToSnakeCase(this string str)
         => Regex.Replace(str, "(?<=.)([A-Z])", "_$1").ToLower();
-    
+
     public static void SyncPermissionsWithDatabase<TContext>(this ILukaBuilder builder)
         where TContext : DbContext, IApplicationDbContext
     {

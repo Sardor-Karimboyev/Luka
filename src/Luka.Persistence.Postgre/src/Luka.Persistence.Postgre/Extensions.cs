@@ -10,6 +10,14 @@ namespace Luka.Persistence.Postgre;
 
 public static class Extensions
 {
+    public static ILukaBuilder AddPostgreSql<TContext, TDbInitializer>(this ILukaBuilder builder)
+        where TContext : ApplicationDbContext
+        where TDbInitializer : class, IDbInitializer
+    {
+        builder.Services.AddScoped<IDbInitializer, TDbInitializer>();
+        return builder.AddPostgreSql<TContext>();
+    }
+
     public static ILukaBuilder AddPostgreSql<TContext>(this ILukaBuilder builder) where TContext : ApplicationDbContext
     {
         var sqlOptions = builder.GetOptions<PostgreSqlOptions>("postgreSQL");
@@ -28,6 +36,7 @@ public static class Extensions
         return builder;
     }
 
+
     public static IApplicationBuilder UsePostgreSql<TContext>(this IApplicationBuilder app) where TContext : DbContext
     {
         using (var scope = app.ApplicationServices.CreateScope())
@@ -35,11 +44,7 @@ public static class Extensions
             var dbContext = scope.ServiceProvider.GetRequiredService<TContext>();
             // dbContext.Database.EnsureCreated();
             dbContext.Database.Migrate();
-            var initializer = scope.ServiceProvider.GetService<IDbInitializer>();
-            if (initializer is not null)
-            {
-                initializer.InitAsync().GetAwaiter().GetResult();
-            }
+            scope.ServiceProvider.GetService<IDbInitializer>()?.InitAsync().GetAwaiter().GetResult();
         }
 
 

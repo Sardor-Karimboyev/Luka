@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Luka.CQRS.Queries</PackageId>
-        <Version>1.0.8</Version>
+        <Version>1.0.9</Version>
         <Authors>Sardor Karimboyev</Authors>
         <Company>Luka</Company>
         <Description>Luka CQRS Queries</Description>

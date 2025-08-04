@@ -1,4 +1,4 @@
-namespace ClassLibrary1;
+namespace Luka.CQRS.Queries;
 
 public class PagedResultBase
 {
@@ -6,7 +6,7 @@ public class PagedResultBase
     public int ResultsPerPage { get; }
     public int TotalPages { get; }
     public long TotalResults { get; }
-        
+
     protected PagedResultBase()
     {
     }

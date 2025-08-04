@@ -31,8 +31,12 @@ public static class Extensions
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
         builder.Services.AddScoped<IApplicationDbContext, TContext>();
-        if(sqlOptions.IsNeedToSyncPermissionEnumToDb)
+        if (sqlOptions.IsNeedToSyncPermissionEnumToDb)
+        {
+            var context = builder.Services.BuildServiceProvider().GetRequiredService<TContext>();
+            context.Database.Migrate();
             builder.SyncPermissionsWithDatabase<TContext>();
+        }
         return builder;
     }
 

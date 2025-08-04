@@ -1,4 +1,4 @@
-namespace ClassLibrary1;
+namespace Luka.CQRS.Queries;
 
 public class PagedQueryBase : IPagedQuery
 {

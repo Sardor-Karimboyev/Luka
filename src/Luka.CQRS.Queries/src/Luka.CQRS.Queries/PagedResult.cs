@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace ClassLibrary1;
+namespace Luka.CQRS.Queries;
 
 public class PagedResult<T> : PagedResultBase
 {

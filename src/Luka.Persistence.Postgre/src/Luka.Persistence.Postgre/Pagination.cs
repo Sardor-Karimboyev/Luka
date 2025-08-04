@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using ClassLibrary1;
+using Luka.CQRS.Queries;
 using Microsoft.EntityFrameworkCore;
 
 namespace Luka.Persistence.Postgre;

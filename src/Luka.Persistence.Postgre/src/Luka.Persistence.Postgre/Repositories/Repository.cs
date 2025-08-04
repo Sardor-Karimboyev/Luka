@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using ClassLibrary1;
+using Luka.CQRS.Queries;
 using Luka.Types;
 using Microsoft.EntityFrameworkCore;
 
